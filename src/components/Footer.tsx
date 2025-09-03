@@ -28,13 +28,13 @@ const Footer = () => {
             </h2>
           </div>
           <div className="mt-8 flex gap-6 lg:mt-0">
-            <Link href="/menu" className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)]">
+            <Link href="/menu" className="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)] focus:outline-none focus:text-[var(--primary-color)] focus:underline">
               Menù
             </Link>
-            <Link href="/#about" className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)]">
+            <Link href="/#about" className="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)] focus:outline-none focus:text-[var(--primary-color)] focus:underline">
               Chi Siamo
             </Link>
-            <Link href="/#contact" className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)]">
+            <Link href="/#contact" className="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)] focus:outline-none focus:text-[var(--primary-color)] focus:underline">
               Contatti
             </Link>
           </div>

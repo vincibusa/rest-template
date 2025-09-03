@@ -1,13 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 
 interface HeaderProps {
   onOpenReservation: () => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ onOpenReservation }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
@@ -50,11 +53,17 @@ const Header: React.FC<HeaderProps> = ({ onOpenReservation }) => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={onOpenReservation}
-          className="flex h-10 w-auto cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--primary-color)] px-4 text-sm font-medium text-white transition-colors hover:bg-opacity-90"
+          className="flex h-10 w-auto cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--primary-color)] px-4 text-sm font-medium text-white transition-all duration-200 hover:bg-[var(--primary-hover)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-opacity-50 focus:scale-105"
+          aria-label="Prenota un tavolo"
         >
           Prenota
         </motion.button>
-        <button className="md:hidden flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--secondary-color)] text-[var(--primary-color)] transition-colors hover:bg-[var(--primary-color)] hover:text-white">
+        <button 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--secondary-color)] text-[var(--primary-color)] transition-colors hover:bg-[var(--primary-color)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+          aria-label="Apri menu mobile"
+          aria-expanded={isMobileMenuOpen}
+        >
           <svg
             fill="currentColor"
             height="20px"
@@ -66,6 +75,65 @@ const Header: React.FC<HeaderProps> = ({ onOpenReservation }) => {
           </svg>
         </button>
       </div>
+
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="absolute top-full left-0 right-0 bg-[var(--glass-bg)] backdrop-blur-md border-b border-[var(--glass-border)] md:hidden glassmorphism"
+          >
+            <nav className="flex flex-col p-4 space-y-3">
+              <Link 
+                href="/" 
+                className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link 
+                href="/menu" 
+                className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Menù
+              </Link>
+              <Link 
+                href="/#about" 
+                className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Chi Siamo
+              </Link>
+              <Link 
+                href="/#gallery" 
+                className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Galleria
+              </Link>
+              <Link 
+                href="/#contact" 
+                className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contatti
+              </Link>
+              <button
+                onClick={() => {
+                  onOpenReservation();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-sm font-medium text-[var(--primary-color)] bg-white/20 hover:bg-white/30 transition-colors py-2 px-3 rounded-lg text-left"
+              >
+                Prenota Tavolo
+              </button>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };
