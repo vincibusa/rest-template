@@ -1,15 +1,30 @@
-@import "tailwindcss"; 
+@import "tailwindcss";  
 
 :root {
-  --primary-color: #c00000;
-  --secondary-color: #fce8e8;
-  --background-color: #fdfbfb;
-  --text-primary: #1a1a1a;
-  --text-secondary: #4d4d4d;
+  --primary-color: #6366f1; /* Indigo 500 - a subtle, modern primary */
+  --secondary-color: #e0e7ff; /* Indigo 100 */
+  --background-color: #f8fafc; /* Slate 50 - very light grey */
+  --text-primary: #1e293b; /* Slate 900 - dark grey for main text */
+  --text-secondary: #475569; /* Slate 600 - medium grey for secondary text */
+
+  /* Glassmorphism variables */
+  --glass-bg: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+  --glass-border: rgba(255, 255, 255, 0.25); /* More opaque white for border */
+  --glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: var(--background-color);
   color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Utility class for glassmorphism effect */
+.glassmorphism {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
 }

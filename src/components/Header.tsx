@@ -1,5 +1,7 @@
+'use client';
 
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 interface HeaderProps {
   onOpenReservation: () => void;
@@ -7,45 +9,52 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ onOpenReservation }) => {
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-gray-200 bg-white/80 px-4 py-3 backdrop-blur-sm sm:px-6 lg:px-8">
+    <motion.header
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 120, damping: 14, delay: 0.2 }}
+      className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-[var(--glass-border)] bg-[var(--glass-bg)] px-4 py-3 backdrop-blur-sm sm:px-6 lg:px-8 glassmorphism"
+    >
       <div className="flex items-center gap-4">
         <svg
-          className="h-8 w-8 text-red-600"
+          className="h-8 w-8 text-[var(--primary-color)]"
           fill="none"
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
         </svg>
-        <h1 className="text-xl font-bold tracking-tighter text-gray-900">
+        <h1 className="text-xl font-bold tracking-tighter text-[var(--text-primary)]">
           Ristorante
         </h1>
       </div>
       <nav className="hidden items-center gap-6 md:flex">
-        <Link href="/" className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
+        <Link href="/" className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">
           Home
         </Link>
-        <Link href="/menu" className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
+        <Link href="/menu" className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">
           Menù
         </Link>
-        <Link href="/#about" className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
+        <Link href="/#about" className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">
           Chi Siamo
         </Link>
-        <Link href="/#gallery" className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
+        <Link href="/#gallery" className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">
           Galleria
         </Link>
-        <Link href="/#contact" className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">
+        <Link href="/#contact" className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">
           Contatti
         </Link>
       </nav>
       <div className="flex items-center gap-2">
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={onOpenReservation}
-          className="flex h-10 w-auto cursor-pointer items-center justify-center overflow-hidden rounded-full bg-red-100 px-4 text-sm font-medium text-red-600 transition-colors hover:bg-red-200"
+          className="flex h-10 w-auto cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--primary-color)] px-4 text-sm font-medium text-white transition-colors hover:bg-opacity-90"
         >
           Prenota
-        </button>
-        <button className="md:hidden flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-red-100 text-red-600 transition-colors hover:bg-red-200">
+        </motion.button>
+        <button className="md:hidden flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--secondary-color)] text-[var(--primary-color)] transition-colors hover:bg-[var(--primary-color)] hover:text-white">
           <svg
             fill="currentColor"
             height="20px"
@@ -57,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenReservation }) => {
           </svg>
         </button>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
