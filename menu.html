@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gusto - Menu</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #ea2a33;
+      --secondary-color: #fef0f1;
+      --background-color: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #4d4d4d;
+      --accent-color: #ffcdd2;
+      --br-none: 0;
+      --br-sm: 0.125rem;
+      --br-md: 0.375rem;
+      --br-lg: 0.5rem;
+      --br-xl: 0.75rem;
+      --br-2xl: 1rem;
+      --br-3xl: 1.5rem;
+      --br-full: 9999px;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-primary);
+    }
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-background-color text-primary">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4 text-[var(--text-primary)]">
+<svg class="h-6 w-6 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+<h2 class="text-xl font-bold">Gusto</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-[var(--primary-color)]" href="#">Menu</a>
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="#">Prenotazioni</a>
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="#">Contatti</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-transparent text-[var(--text-primary)] border border-gray-300 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-100 transition-colors">
+<span class="truncate">Accedi</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 bg-transparent text-[var(--text-primary)] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 border border-gray-300 hover:bg-gray-100 transition-colors">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+<div class="relative w-full h-80 rounded-2xl overflow-hidden mb-12">
+<img alt="Hero image del ristorante" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6G6uOfpLKcenagqoBKXyKX8n4nOckwVUIfObT0lWiMDYv_GZZEtg8qs0EJgH-CNfDuPiacpGwu-2p8Z5g0r8Twkms5TByjNsRq3imwevTK3cX9tq0tikKzpn0vvIEfBSjvgEOViQX9kPZqlI27ahRCAFj6ZxV673JcwANix3Mg3DiFOHtuqjbFll62igOCsOQbp_tghGwojjk-5IhzvUMth-ys70bDe3u4qbtjrNT7M79pcigehFjoP7kJJoiQQBXoj62UxI-1Mk"/>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+<h1 class="text-5xl font-extrabold text-white text-center tracking-tight">Il Nostro Menu</h1>
+</div>
+</div>
+<div class="sticky top-16 bg-white/80 backdrop-blur-sm z-40 py-4 mb-8">
+<div class="flex justify-center border-b border-gray-200 gap-4 sm:gap-8">
+<a class="flex flex-col items-center justify-center border-b-2 border-b-[var(--primary-color)] text-[var(--text-primary)] pb-3 pt-2 px-2" href="#antipasti">
+<p class="text-sm sm:text-base font-bold">Antipasti</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-b-[var(--primary-color)]/50 pb-3 pt-2 px-2 transition-colors" href="#primi">
+<p class="text-sm sm:text-base font-bold">Primi</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-b-[var(--primary-color)]/50 pb-3 pt-2 px-2 transition-colors" href="#secondi">
+<p class="text-sm sm:text-base font-bold">Secondi</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-b-[var(--primary-color)]/50 pb-3 pt-2 px-2 transition-colors" href="#dolci">
+<p class="text-sm sm:text-base font-bold">Dolci</p>
+</a>
+</div>
+</div>
+<section class="mb-16 scroll-mt-24" id="antipasti">
+<h2 class="text-3xl font-bold text-[var(--text-primary)] mb-8 text-center sm:text-left">Antipasti</h2>
+<div class="space-y-6">
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Bruschetta al Pomodoro" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs-pIHcmKQVRz34Z-UkT8Rr53nRujVzjSiNl9Oe5-2GlpU4lqqycZaTZhX0YLYProGI7KWUa85L6Drp9LP3VR0AgpdOi2LUFwcVk18opYaNTbyRBeZ-N4jiOLz1l5KTxQ3axPPUsoNm5Tt2E9TZYckRUBJI2Dpw0gHJIMzKdaE_sZMrebCqbVr63z7Cd0F6_Ta1FIVp0kD8pk2X75KXOKh1L3_6eo9YSudtrtRE_F9Pct3LcDjDE_wrFJMiWHnVJLa_GOKoluKw9U"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Bruschetta al Pomodoro</h3>
+<p class="text-sm text-[var(--text-secondary)]">Pane tostato con pomodori freschi, basilico e olio extravergine.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€8.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Carpaccio di Manzo" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgILdWeoHsNpSZo4JISzc1PZoRwxLdaO_EVGPMsoXYs2Lzkt-fAChtNLdmR2xVdEe1CgMyWtbmzL2YSprHnuAgiUAn1rMT3YO8Se-aZbeGMhWdwFL4b5FGJy5TTSu--O_m2OXI2kkUnZoKJNeo6_y56_8UEG3zW6gKqTWwTOeY1dtJfBMAJXnDrKDQv4uZo8m9Z4eyvZN1A6MJxy7V65UAh536m94WSl_dyYP07niNVJG6zVIMBuyKwzGrGbStS9l9IJLq-rlzGGQ"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Carpaccio di Manzo</h3>
+<p class="text-sm text-[var(--text-secondary)]">Sottili fette di manzo crudo con scaglie di parmigiano e rucola.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€12.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Insalata Caprese" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN1Q_CmUmnxzJJGcr3ICS3tZGOeNerHY0VDCDj45nEWIEFflQimUI0X6d7N0O23YoioCNQeom2Pk9rpYOXM-W2ueL0jdkdxyL440JKDkS6i9N6UnPeNZDTmsQs8KekdYZzi30Hjb-5dL1qjTtENmXfmcF1ilbjV6t4I3E_mDTh9U-_IumQK6RkO0fK-LcjErVV7ZJGW8TaXceNDw-6ckCMiljPkExxotniutYf4JcpStJpH4iUWX2sjTC4_UYeSRUH5NqleQyMGL4"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Insalata Caprese</h3>
+<p class="text-sm text-[var(--text-secondary)]">Mozzarella fresca, pomodori e basilico, conditi con olio e sale.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€10.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Arancini Siciliani" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_OVakkZd1HnGTPOtNteDVo7JAjNRdkolpZ3LeFbrCUqQD7F0KioUJMzf2cFGJuiqC56_5hJOOY-imnLT5AWxwkTAWxN6KHAfXmytObO0d16wUHyjv2K3e65aB2ZpOcKcMANJqIuoGBdbpkrSQIsDedMceCLVJovhW0DxxBix8v7r_t8jP2U4w3gR-ipv1uybAYY35n0vHKLuzBBrJbIfGcibc7t8jdIbyLge7XLBWg6YrgdmzctxbaQdeqlJnQvnP390riNZsLDY"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Arancini Siciliani</h3>
+<p class="text-sm text-[var(--text-secondary)]">Palline di riso fritte ripiene di ragù e mozzarella.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€9.00</p>
+</div>
+</div>
+</section>
+<section class="mb-16 scroll-mt-24" id="primi">
+<h2 class="text-3xl font-bold text-[var(--text-primary)] mb-8 text-center sm:text-left">Primi</h2>
+<div class="space-y-6">
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Spaghetti alla Carbonara" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBz2qI3w5wJyWoeOtjF1a_Ap64dZ8QL0n7a_fXontabEhs0yBCt54ura1A9a4QfEGkd5VfdYcXO8KqNGp3ftOupjiDoyFs6lTBoPUI49EMK1o8HtQIa-vqIk0PBmhM69ohSsWr4Ef0CKxgxZfmStc5XgcqgL74rG9uUFEF1d9pADArxxi33xf2BL8PwFqHVtwOjJIShWmpMKgbNBfbosNfNa7jBT7XVQu37ncn7uUYLiopcW5Othiwq_aboo0d18o9v2kxU2jofKI"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Spaghetti alla Carbonara</h3>
+<p class="text-sm text-[var(--text-secondary)]">Spaghetti con uova, guanciale, pecorino romano e pepe nero.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€14.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Risotto ai Funghi Porcini" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHsG4Co13F7w5E1Zt6ceerIYR0fXAESxbLYV-05HgX2cEKULLqGIMDKaZ2io7tWmLMri3hiGOiQO7Zu0gWJtNwRo-eef9wrkwkTGnPcKZKNJcQ6lSmGD0Rl39PVfMDxWnqeS6kpF_sFusCLwVjsF1o6rY2xACPbJAfeajgSmRWaL5bnBfSJeSQ-rrj5dC24A5UyOu0P5Q7Z5nIzA3SVoH2_keaZSJCGt7or3gg6XXBL2o7VgCyod42pb8nJuDdGXBTAv0XmCIH0GM"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Risotto ai Funghi Porcini</h3>
+<p class="text-sm text-[var(--text-secondary)]">Risotto cremoso con funghi porcini freschi.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€16.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Lasagna al Forno" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgOVS58-JoOrGdsitstghSWtsZmk96Ex-Ur0IMG3LtFJIawY-Lc12ubrpO-i7SKpxRGyQaZhOgmaBtXleI50jeBaRWJhZC56pAphY6SXbLN4ReQq8CKS26IA7hB1aXfV3M2BitPg_WA3sC4Qyz0Jm6nNtmeVHKc1QZvZ0rmKKBw1UIdeUqQiTNLndJPqrwBMkDY96D1Abk7fzrjFVdIms8cxIxZEpJVDeXuSHBuTvtuGLGVaz0X6_09Rv6Q3n13o0DVjWYA97i-MI"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Lasagna al Forno</h3>
+<p class="text-sm text-[var(--text-secondary)]">Strati di pasta, ragù, besciamella e parmigiano.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€15.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Gnocchi al Pesto" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDneJp_G9d46_o3LwRHYtQSsfhuVcL4wVpnQaOyMVVURTJs6lCt7qYOkHZYQAf9x52PEOkD4kddkV16Zi4og2Vui0Ed0NDVFrWseLpKFuyn4_h10FuvqBik5IQIrn95B4Vj_GMqruL8APT3ynq6MIG2lnnLWTuh5IP4IREbuDaiYTuSoHDSzQ65ZdoiQwQzgqu2GmYJ-qAh3LyEGDprdf_jOVHuOQ34vW-s4XYQfyPmVwftsv7lOJTbB8Z8ZY10Zv4vaBTydjLAJmA"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Gnocchi al Pesto</h3>
+<p class="text-sm text-[var(--text-secondary)]">Gnocchi di patate con pesto genovese.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€13.00</p>
+</div>
+</div>
+</section>
+<section class="mb-16 scroll-mt-24" id="secondi">
+<h2 class="text-3xl font-bold text-[var(--text-primary)] mb-8 text-center sm:text-left">Secondi</h2>
+<div class="space-y-6">
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Bistecca alla Fiorentina" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDymLSZxb2_FE5kb3hCN2wG9Y6ouGZeb6jYaOqpngCI1LaRLMozvnussgXoh6vqsCpjEVfywUvWNO82z85wy1cNJIO9snF9fwGSbFOIniBcQTi7Nu8IGZp5cj-lld4nwzDHI_pzX93jyhIkSEl_MRt6i2jbJM5qLXa-i9IJrFE86TW5rXVICDS4ez8Kryw6TGCqF5FSRSW6j521WPUDJZYVSqVe232-If89o6gQhy2MKr0SzNj-YyYMuVb80R5gWDQBBCTxB8bQ48o"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Bistecca alla Fiorentina</h3>
+<p class="text-sm text-[var(--text-secondary)]">Bistecca di manzo cotta alla griglia, tipica di Firenze.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€28.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Ossobuco alla Milanese" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG0TXwKP3Bw8zT4AmtwVbwlHEEDV86D74-khtLKqS8phDU2uN5TVDOjI3y08cRe7a_iMRcyrX0MVzU8qGgWrwQcfop33yrnt-MX2BfYXozDs0CFHj6ZjHMEZ9uheuacQtOa8XPlVd69wXunv1vuUFEM87VZ8PIFngxzVJBETfZ8WFo-1dcyCtSAUhBT3R__s2qfiXJU7phX5U0JkhKsLjO1tTM9mF_l2fjCGPWgkCTZIqYdTWmuI3I4YKzIwnorZ17_meiST504oY"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Ossobuco alla Milanese</h3>
+<p class="text-sm text-[var(--text-secondary)]">Stinco di vitello brasato con verdure e vino bianco.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€25.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Pollo alla Cacciatora" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTjCLSBtWkzEwAcee75RtfUHhqZp1dp9-bPZJvIetgLOgtzQ_yQZ6A1-Ka3jGng9mSudPwQ2d5FaApfnluBZDz1PIF1I5pN6mIydjERQXLcb0XNzTUdRqiTqIOoJH3Xy8woKtiEFsSywBOfp_Wn6l0bSk3Z74cC5hQ78Yg-dYHkRt1rwk1WtvyD48BwUVyfI0ZXZBCDuSUDnBCZ2cQfr5npTnzVD27TDxyqpGaY-9Hi24alWwRi7wG1Lh_8LKodkPxLJ6hh9twFME"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Pollo alla Cacciatora</h3>
+<p class="text-sm text-[var(--text-secondary)]">Pollo cotto in umido con pomodoro, olive e capperi.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€18.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Salmone al Forno" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZUn_nUuwqRfNUheblMvc-QViolzsNLy4Jjkt-Q0J2oZScwDCN0pxBMymkHcVzkrBbn-ACwOGKKUXDs7HFfqXcsk_GVbLdVUhwI4soxusH9eLKAoW-GUv1QY4pGhxEkquAuT_87FoiqKtlb-gkciR1Y4m1tXvh-C8vxLyfLfJTvbnqlRcWRYFnUKw18TbsugkcTd7Dnv1-aHtxyM1qhOlg6Rd1zEngM5Gsp2U8xOCvhK4ihEbav23oi4sxdSlFQm7pqqo0SHSyXBk"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Salmone al Forno</h3>
+<p class="text-sm text-[var(--text-secondary)]">Filetto di salmone cotto al forno con erbe aromatiche.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€22.00</p>
+</div>
+</div>
+</section>
+<section class="mb-16 scroll-mt-24" id="dolci">
+<h2 class="text-3xl font-bold text-[var(--text-primary)] mb-8 text-center sm:text-left">Dolci</h2>
+<div class="space-y-6">
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Tiramisù" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHbCENPkzlp5NHwQJGIaX9Ploihd5dmdiYo6mGlvRrFxGK9Iu70Fk42zRAerXsnHylSVhBpwdGC2HUknw8B6_QzNDDJ9pBAvM6AgNt1__2ECFxqsb-LU3lnYbHSKjzkqmy6Z9wvDOK259Irx09jby01sQryIwAnfIQzvU0CZaV1HY83JWLo8WFdB6k5qWF1gJ60mNnNvYicbMfyJ7ep1zvBv3bcn47Yp96uDZky8RUkxJHJWumVtvZdCT__hFWxQs-csZ7dx_F9EI"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Tiramisù</h3>
+<p class="text-sm text-[var(--text-secondary)]">Dolce al cucchiaio con savoiardi, caffè, mascarpone e cacao.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€7.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Panna Cotta" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNUyE1vMrsU8eRHCWtRX0pEEmWNjZK70qTY_yX_plOmCS2LkwxpUAZFlvNKpUhkri7h-R7XSb5TNNViJoscfNZwB_EEhZoIiCF49O-9Jc689WcjHpFM9a5tcKZssVIiwKJhQrz9SIOK6SW-uWTkbihCQ6vudLg2xmk_XqdxTbMSYlqp6zpdwHte6J7B8Za1Ns_s7LXRtenp8N47V1h0KkrEKHHWjD8hjEdUq-689UHv6dSlokckcI5MzbPg7ObG7Wq7tUeXyAftCY"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Panna Cotta</h3>
+<p class="text-sm text-[var(--text-secondary)]">Crema cotta con panna, zucchero e vaniglia.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€7.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Cannoli Siciliani" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxKZJGT8-zB-GllvsW5hLF6uNZG2Jw1g-tgQfmqoLjpIfKoIg8jRV9K_Gy48qLu9zVTRcSHgWPvEW9wQzI4urGeMwV8aOSlbAB0TiMQxgh2xH-BXCXchBaX0hc9yobZyQfSNbVH-NWggwe7OnLDUcBFNG1EYHr0TghzM6MoOZkCLbJ767Cd52fFpQTwguHGvJ_a-53svNpJAa30yhOZgp5tlKXXnX8q7JI3jSBHdTxttHjA7O4UDQfjsKq32SIRQqOXqClgDNNiKo"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Cannoli Siciliani</h3>
+<p class="text-sm text-[var(--text-secondary)]">Cialde croccanti ripiene di ricotta dolce e canditi.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€8.00</p>
+</div>
+<div class="glassmorphism p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+<img alt="Torta della Nonna" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHWXSoUHIfYURwoDhg5k5Lda19BrSPlg2CljEyPj2euzxXRUyVPJP01RJTffDWcY9dBw938tKcSZ3XOXM1Nf2kNm9slYnLx-kb0uuVPAPCuSx-7N_6wLqeVJudrA9MwkS5Fy4vZEx-rAjeFiVxKdWgZjvPsaOkPuEwhsEIHFwjbNpe3EE5CQ-vTJ2V3aF1anLZniMgO7HRjaUEvCJC5wjUSfM_yBi4vokqQg4waz0Fc0crFdJBhgtjspQ700jCV2xbqvozU44kGbA"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Torta della Nonna</h3>
+<p class="text-sm text-[var(--text-secondary)]">Torta con crema pasticcera e pinoli.</p>
+</div>
+<p class="text-lg font-bold text-[var(--primary-color)]">€7.00</p>
+</div>
+</div>
+</section>
+<div class="text-center mt-12">
+<button class="bg-[var(--primary-color)] text-white px-8 py-3 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-opacity-50 transition duration-200 ease-in-out text-lg font-bold">
+<span class="truncate">Prenota un tavolo</span>
+</button>
+</div>
+</main>
+</div>
+
+</body></html>

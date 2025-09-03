@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contatti - Ristorante</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #ea2a33;
+        --secondary-color: #fef0f1;
+        --background-color: #ffffff;
+        --text-primary: #1a1a1a;
+        --text-secondary: #4d4d4d;
+        --accent-color: #ffcdd2;
+        --glass-bg: rgba(255, 255, 255, 0.5);
+        --glass-border: rgba(255, 255, 255, 0.3);
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-primary);
+      }
+      .glassmorphism {
+        background: var(--glass-bg);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="relative min-h-screen w-full overflow-x-hidden bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUacQC0vAretnJODR8J2-88DEXfj0CHt2hOoqcmXvRaOQtjWv7FEW2LPmfOEtuOQemaKPcLN06iuvBF-yurkufD1_eioBv2ldJ_sEWN_siFGROMomNZP3JDqzdEQmvboV3MAG1ByhAy9fX1S4vx5XWfFUkgm6p4nfM6I3EmHbZTl1R1RAwNJLqLX4T3OGtCGEdItUI6oi2U_-McmWCKShm1l9Gm0W4QWUaD4xfR5iDwNCb7XskEVXZRHHwhaxtRuYna3aLXgeSwoQ");'>
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="relative z-10 flex h-full min-h-screen flex-col">
+<header class="flex items-center justify-between whitespace-nowrap px-4 py-3 sm:px-10 glassmorphism shadow-lg">
+<a class="flex items-center gap-3 text-white" href="#">
+<span class="material-symbols-outlined text-3xl"> restaurant </span>
+<h2 class="text-xl font-bold">Ristorante</h2>
+</a>
+<nav class="hidden items-center gap-9 md:flex">
+<a class="text-sm font-medium text-white hover:text-[var(--accent-color)]" href="#">Menù</a>
+<a class="text-sm font-medium text-white hover:text-[var(--accent-color)]" href="#">Prenotazioni</a>
+<a class="text-sm font-medium text-white hover:text-[var(--accent-color)]" href="#">Eventi</a>
+<a class="text-sm font-medium text-white hover:text-[var(--accent-color)]" href="#">Contatti</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[var(--primary-color)] px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-red-700">
+<span class="truncate">Accedi</span>
+</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-3xl text-white"> menu </span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 items-center justify-center p-4">
+<div class="w-full max-w-5xl rounded-3xl p-6 sm:p-10 glassmorphism">
+<div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+<div class="flex flex-col">
+<h1 class="mb-4 text-4xl font-extrabold text-[var(--text-primary)] md:text-5xl">Contattaci</h1>
+<p class="mb-8 text-base leading-relaxed text-[var(--text-secondary)]">Siamo a tua disposizione per qualsiasi informazione. Contattaci o vieni a trovarci per un'esperienza culinaria unica.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1 text-2xl text-[var(--primary-color)]"> location_on </span>
+<div>
+<h3 class="font-bold text-[var(--text-primary)]">Indirizzo</h3>
+<p class="text-[var(--text-secondary)]">Via Roma, 123, 20121 Milano, Italia</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1 text-2xl text-[var(--primary-color)]"> call </span>
+<div>
+<h3 class="font-bold text-[var(--text-primary)]">Telefono</h3>
+<p class="text-[var(--text-secondary)]">+39 02 1234 5678</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1 text-2xl text-[var(--primary-color)]"> mail </span>
+<div>
+<h3 class="font-bold text-[var(--text-primary)]">Email</h3>
+<p class="text-[var(--text-secondary)]">info@ristorante.it</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1 text-2xl text-[var(--primary-color)]"> schedule </span>
+<div>
+<h3 class="font-bold text-[var(--text-primary)]">Orari di Apertura</h3>
+<p class="text-[var(--text-secondary)]">
+                        Lun-Ven: 12:00-15:00, 19:00-23:00<br/>
+                        Sab-Dom: 19:00-23:30
+                      </p>
+</div>
+</div>
+</div>
+</div>
+<div class="h-80 w-full rounded-2xl md:h-full">
+<iframe allowfullscreen="" class="size-full rounded-2xl border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.887241285044!2d9.18854031589414!3d45.46421397910018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ae452de7d9%3A0x2f8d8f4c3a5b2e0b!2sDuomo%20di%20Milano!5e0!3m2!1sit!2sit!4v1678886565321!5m2!1sit!2sit">
+</iframe>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prenotazione - Ristorante</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #ea2a33;
+        --secondary-color: #fef0f1;
+        --background-color: #ffffff;
+        --text-primary: #1a1a1a;
+        --text-secondary: #4d4d4d;
+        --accent-color: #ffcdd2;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-primary);
+      }
+      .glassmorphism {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .form-input {
+        background-color: transparent !important;
+        border: none !important;
+      }
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3e%3cpolyline points="6 9 12 15 18 9"%3e%3c/polyline%3e%3c/svg%3e');
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1.5em 1.5em;
+        padding-right: 2.5rem;
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="relative min-h-screen w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMvACpnDUkxbhQKvwLoaKRpq-QIIy3i0JgQu3TmBNKoqDcdALQ1pV0i01OKzkg5k4tGjlHSjog8bPXcA4u5Qp3KAUTwX7gsMSeFWFSL2qHBa7I9c6xRSE6MBLG-NgDCJtn1qKp0VRMkVcUfclyhWaZ2OzE0TpsynKJPV4LClnBWvcI6hnekWdApTcfaxI2sceJvamJ1wJsdMK1F8VRDmDKXZGePnsRCF0LTGngbBVZTDJgFa_EbZ6YMtnWZjhcp1SF3sbD1YLSk3U');">
+<div class="absolute inset-0 bg-black/50"></div>
+<div class="relative z-10 flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap px-10 py-4">
+<div class="flex items-center gap-4 text-white">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+<h2 class="text-xl font-bold">Ristorante</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9 text-white">
+<a class="text-sm font-medium leading-normal hover:text-[var(--accent-color)] transition-colors" href="#">Menù</a>
+<a class="text-sm font-medium leading-normal hover:text-[var(--accent-color)] transition-colors" href="#">Posizione</a>
+<a class="text-sm font-medium leading-normal hover:text-[var(--accent-color)] transition-colors" href="#">Contatti</a>
+</nav>
+<button class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[var(--primary-color)] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-700 transition-colors">
+<span class="truncate">Prenota online</span>
+</button>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</header>
+<main class="flex flex-1 items-center justify-center py-10 px-4">
+<div class="glassmorphism w-full max-w-lg rounded-3xl p-8 shadow-2xl">
+<h1 class="text-center text-4xl font-bold text-white mb-8">Prenota un Tavolo</h1>
+<form class="space-y-6">
+<div class="relative">
+<span class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 left-4 text-white/70">calendar_today</span>
+<input class="form-input w-full rounded-xl pl-12 pr-4 py-4 text-white placeholder:text-white/70 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-all duration-300" onblur="(this.type='text')" onfocus="(this.type='date')" placeholder="Seleziona una data" type="text"/>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 left-4 text-white/70">schedule</span>
+<select class="form-input w-full rounded-xl pl-12 pr-4 py-4 text-white focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-all duration-300">
+<option class="text-black" disabled="" selected="">Seleziona un'ora</option>
+<option class="text-black" value="19:00">19:00</option>
+<option class="text-black" value="19:30">19:30</option>
+<option class="text-black" value="20:00">20:00</option>
+<option class="text-black" value="20:30">20:30</option>
+<option class="text-black" value="21:00">21:00</option>
+</select>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 left-4 text-white/70">group</span>
+<select class="form-input w-full rounded-xl pl-12 pr-4 py-4 text-white focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-all duration-300">
+<option class="text-black" disabled="" selected="">Numero di persone</option>
+<option class="text-black" value="1">1 Persona</option>
+<option class="text-black" value="2">2 Persone</option>
+<option class="text-black" value="3">3 Persone</option>
+<option class="text-black" value="4">4 Persone</option>
+<option class="text-black" value="5+">5+ Persone</option>
+</select>
+</div>
+<button class="w-full rounded-xl py-4 bg-[var(--primary-color)] text-white text-lg font-bold hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-opacity-50 transition duration-300 ease-in-out">
+                Trova un Tavolo
+              </button>
+</form>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
