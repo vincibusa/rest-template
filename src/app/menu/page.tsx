@@ -16,22 +16,7 @@ const MenuPage = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative w-full h-80 rounded-2xl overflow-hidden mb-12 glassmorphism"
-      >
-        <Image
-          alt="Hero image del ristorante"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6G6uOfpLKcenagqoBKXyKX8n4nOckwVUIfObT0lWiMDYv_GZZEtg8qs0EJgH-CNuPiacpGwu-2p8Z5g0r8Twkms5TByjNsRq3imwevTK3cX9tq0tikKzpn0vvIEfBSjvgEOViQX9kPZqlI27ahRCAFj6ZxV673JcwANix3Mg3DiFOHtuqjbFll62igOCsOQbp_tghGwojjk-5IhzvUMth-ys70bDe3u4qbtjrNT7M79pcigehFjoP7kJJoiQQBXoj62UxI-1Mk"
-          layout="fill"
-          objectFit="cover"
-        />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="text-5xl font-extrabold text-white text-center tracking-tight">Il Nostro Menu</h1>
-        </div>
-      </motion.div>
+
 
       <motion.div
         initial={{ opacity: 0, y: -20 }}

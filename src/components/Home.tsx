@@ -25,7 +25,7 @@ const Home = () => {
         )}
         <Image
           alt="Piatto gourmet del Ristorante Aurora con ingredienti freschi e presentazione elegante"
-          src="/restaurant-hero.jpg"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuA15ydSma3tkoTHboGjkGUhnCY25SZ44E1lXVEIOSlUivFsSkJDfCdsKGAaTK6hvH5N6KxluyynUJyfCZ5yct1AWy6h-u55_r0Qvutk0aOUv7-Q7cyEGp5gS8TqRz_P2Oq6BDnIPA6gQcyzxvAdCgj6dV623ALGT-xSCwlQCcv86fECMejiAAJ87_cM7ABhWVGiAqbfS4QyBXh6gRcHSQherdqOR-HGtbKvy2pDcmCO0PAJvxpV4vQK5MqjJw_6kWcQg6DKnkkq0Ak"
           fill
           sizes="100vw"
           style={{

@@ -33,7 +33,7 @@ const About = () => {
         >
           <Image
             alt="Il proprietario del ristorante"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD3PqJp85lR_n-U20Q5t-0T7cQe7fLzQc0K1Q5cZg0S6c0c2N5v5Z5p6v6Z4Q8q8w3R9b8q6f7N8l0R5a-W1e5d6d3Z2A2B3v4Z5Q6-e7g8h9i0j-k1l2m3n4o5p-q-r-s-t-u-v-w-x-y-z"
+            src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?q=80&w=1065&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             layout="fill"
             objectFit="cover"
             className="rounded-xl shadow-lg"

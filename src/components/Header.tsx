@@ -16,7 +16,11 @@ const Header: React.FC<HeaderProps> = ({ onOpenReservation }) => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 120, damping: 14, delay: 0.2 }}
-      className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-[var(--glass-border)] bg-[var(--glass-bg)] px-4 py-3 backdrop-blur-sm sm:px-6 lg:px-8 glassmorphism"
+      className={`sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-[var(--glass-border)] px-4 py-3 backdrop-blur-sm sm:px-6 lg:px-8 ${
+        isMobileMenuOpen 
+          ? 'bg-white' 
+          : 'bg-[var(--glass-bg)] glassmorphism'
+      }`}
     >
       <div className="flex items-center gap-4">
         <svg
@@ -83,7 +87,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenReservation }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 bg-[var(--glass-bg)] backdrop-blur-md border-b border-[var(--glass-border)] md:hidden glassmorphism"
+            className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 md:hidden"
           >
             <nav className="flex flex-col p-4 space-y-3">
               <Link 
