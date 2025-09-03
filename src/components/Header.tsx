@@ -57,7 +57,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenReservation }) => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={onOpenReservation}
-          className="flex h-10 w-auto cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--primary-color)] px-4 text-sm font-medium text-white transition-all duration-200 hover:bg-[var(--primary-hover)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-opacity-50 focus:scale-105"
+          className="hidden md:flex h-10 w-auto cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--primary-color)] px-4 text-sm font-medium text-white transition-all duration-200 hover:bg-[var(--primary-hover)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-opacity-50 focus:scale-105"
           aria-label="Prenota un tavolo"
         >
           Prenota

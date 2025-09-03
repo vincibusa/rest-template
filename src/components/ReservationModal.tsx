@@ -15,13 +15,13 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose }) 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/10"
+          className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 backdrop-blur-sm bg-black/10"
         >
           <motion.div
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
-            className="glassmorphism w-full max-w-lg rounded-3xl p-8 shadow-2xl relative border border-[var(--glass-border)] max-h-[90vh] overflow-y-auto"
+            className="glassmorphism w-full max-w-full sm:max-w-lg rounded-3xl p-8 shadow-2xl relative border border-[var(--glass-border)] max-h-[90vh] overflow-y-auto"
           >
             <button
               onClick={onClose}
