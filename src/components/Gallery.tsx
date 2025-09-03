@@ -20,7 +20,7 @@ const Gallery = () => {
       >
         <motion.h2 variants={itemVariants} className="text-[var(--text-primary)] text-3xl font-bold tracking-tight sm:text-4xl">Esplora il Nostro Ambiente</motion.h2>
         <motion.p variants={itemVariants} className="mt-4 text-[var(--text-secondary)] text-lg leading-relaxed">
-          Immergiti nell'atmosfera unica del nostro ristorante. Scopri gli interni eleganti e l'ambiente accogliente che rendono ogni visita un'esperienza indimenticabile.
+          Immergiti nell&apos;atmosfera unica del nostro ristorante. Scopri gli interni eleganti e l&apos;ambiente accogliente che rendono ogni visita un&apos;esperienza indimenticabile.
         </motion.p>
       </motion.div>
       <motion.div

@@ -113,7 +113,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose }) 
                     className="w-full rounded-xl px-4 py-4 bg-white/10 text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] transition-all duration-300 border border-[var(--glass-border)]"
                     defaultValue=""
                   >
-                    <option className="text-[var(--text-primary)]" disabled>Seleziona un'ora</option>
+                    <option className="text-[var(--text-primary)]" disabled>Seleziona un&apos;ora</option>
                     <option className="text-[var(--text-primary)]" value="19:00">19:00</option>
                     <option className="text-[var(--text-primary)]" value="19:30">19:30</option>
                     <option className="text-[var(--text-primary)]" value="20:00">20:00</option>

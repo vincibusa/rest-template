@@ -18,7 +18,7 @@ const About = () => {
             La Nostra Storia
           </h2>
           <p className="text-lg leading-relaxed">
-            Il nostro ristorante nasce dalla passione per la cucina autentica e dall'amore per l'ospitalità. Fondato da Marco Rossi, un giovane chef con un'esperienza internazionale, il nostro obiettivo è offrire un'esperienza culinaria unica, dove tradizione e innovazione si incontrano.
+            Il nostro ristorante nasce dalla passione per la cucina autentica e dall&apos;amore per l&apos;ospitalità. Fondato da Marco Rossi, un giovane chef con un&apos;esperienza internazionale, il nostro obiettivo è offrire un&apos;esperienza culinaria unica, dove tradizione e innovazione si incontrano.
           </p>
           <p className="mt-6 text-lg leading-relaxed">
             Utilizziamo solo ingredienti freschi e di stagione, provenienti da fornitori locali, per garantire la massima qualità e sostenibilità. Ogni piatto è pensato per esaltare i sapori autentici della cucina italiana, con un tocco di creatività che sorprende e delizia.

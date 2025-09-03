@@ -50,7 +50,7 @@ const Contact = () => {
           <div className="flex flex-col">
             <motion.h2 variants={itemVariants} className="mb-4 text-4xl font-extrabold text-[var(--text-primary)] md:text-5xl">Contattaci</motion.h2>
             <motion.p variants={itemVariants} className="mb-8 text-base leading-relaxed text-[var(--text-secondary)]">
-              Siamo a tua disposizione per qualsiasi informazione. Contattaci o vieni a trovarci per un'esperienza culinaria unica.
+              Siamo a tua disposizione per qualsiasi informazione. Contattaci o vieni a trovarci per un&apos;esperienza culinaria unica.
             </motion.p>
             <div className="space-y-4 md:space-y-6">
               <motion.div variants={itemVariants} className="flex items-start gap-4">

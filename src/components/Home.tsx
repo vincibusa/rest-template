@@ -62,7 +62,7 @@ const Home = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mb-8 max-w-2xl text-lg text-[var(--text-secondary)] md:text-xl"
         >
-          Scopri un'esperienza culinaria indimenticabile, dove la tradizione incontra l'innovazione.
+          Scopri un&apos;esperienza culinaria indimenticabile, dove la tradizione incontra l&apos;innovazione.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
